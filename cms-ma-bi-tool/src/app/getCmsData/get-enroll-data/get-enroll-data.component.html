@@ -1,1 +1,21 @@
 <p>get-enroll-data works!</p>
+<button (click)="fetchData()">Fetch Data</button>
+
+<div *ngIf="firstFileName">
+  <h3>Displaying Contents of First File: {{ firstFileName }}</h3>
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let header of tableHeaders">{{ header }}</th>
+        <!-- Use extracted headers as table headers -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let line of csvContents[firstFileName].split('\n').slice(1)">
+        <!-- Start from the second line to avoid repeating headers -->
+        <td *ngFor="let cell of line.split(',')">{{ cell }}</td>
+        <!-- Splitting each line by comma (CSV) and displaying cells as table data -->
+      </tr>
+    </tbody>
+  </table>
+</div>

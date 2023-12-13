@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetEnrollDataComponent } from './getCmsData/get-enroll-data/get-enroll-data.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { GetEnrollDataComponent } from './getCmsData/get-enroll-data/get-enroll-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
