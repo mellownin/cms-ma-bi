@@ -3,10 +3,12 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GetEnrollDataComponent } from './getCmsData/get-enroll-data/get-enroll-data.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GetEnrollDataComponent
   ],
   imports: [
     BrowserModule,
